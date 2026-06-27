@@ -235,7 +235,7 @@ def print_report(incident_name, started, completed, skipped):
     save = input("\nSave report to file? (Y/N): ").strip().upper()
     if save == "Y":
         filename = f"ir_report_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
-        with open(filename, "w") as f:
+        with open(filename, "w", encoding="utf-8") as f:
             f.write(f"INCIDENT RESPONSE REPORT\n")
             f.write(f"Incident: {incident_name}\n")
             f.write(f"Opened: {started}\n")
